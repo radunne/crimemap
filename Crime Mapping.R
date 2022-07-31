@@ -1,6 +1,6 @@
 #####################################################
 
-# This code uses the ukpolice package to download the latest months reported crime and ASB data for Northern Ireland from www.police.uk
+# This code uses the ukpolice package to download the latest months reported crime and ASB data for Northern Ireland from www.data.police.uk
 # It then projects this info to an interactive map
 
 #####################################################
@@ -8,9 +8,9 @@
 # load required packages
 pacman::p_load(mapview, ukpolice, sf)
 
-# www.police.uk will only allow downloads of a certain size (up to 10,000 records), 
+# www.data.police.uk will only allow downloads of a certain size (up to 10,000 records), 
 # so we do a download for a northern region, and one for a southern region.
-# Belfast is the most concentrated area, so we ruin the dividing line through there to split that cluster in half. 
+# Belfast is the most concentrated area, so we run the dividing line through there to split that cluster in half. 
 # Each region carries some of that load.
 
 # Northern region poly-coordinate data frame
